@@ -1,18 +1,27 @@
-name = "Shirin"
-age = 20
-cgpa = 3.8
-smart = True
+import pandas as pd
+#DataFram form list of lists
+data = [
+    ["A", 90],
+    ["B", 98],
+    ["C", 80]
+]
 
-print(type(name))
-print(type(age))
-print(type(cgpa))
-print(type(smart))
+df = pd.DataFrame(data, columns=["Name", "Marks"])
+print(df)
 
-ask = input("What is your name? ")
-print("Welcome", ask,"!")
+#DataFram from Dictionary
+data1 = {
+    "Name": ["X", "Y", "Z"],
+    "Marks": [99, 80, 86]
+}
+s = pd.DataFrame(data1)
+print(s)
 
-age1 = int(input("Enter your age: "))
-print("You are", age1, "years old")
-
-cgpa1 = float(input("What is your cgpa?"))
-print(cgpa1)
+#DataFram from list of Dictionary
+data2 = [
+    {"Name": "M", "Marks": 55},
+    {"Name": "N", "Marks": 88},
+    {"Name": "O", "Marks": 99}
+]
+t = pd.DataFrame(data2)
+print(t)
